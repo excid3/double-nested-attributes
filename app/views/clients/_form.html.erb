@@ -12,6 +12,7 @@
   <% end %>
 
   <%= f.fields_for :projects do |p| %>
+    <div><%= p.text_field :name, placeholder: "Project name" %></div>
     <%= p.collection_select :programmer_id, Programmer.all, :id, :name, include_blank: "New Programmer" %>
 
     or

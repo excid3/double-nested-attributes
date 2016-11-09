@@ -71,6 +71,6 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.fetch(:client, {}).permit(projects_attributes: [:id, :programmer_id, programmer_attributes: [:name]])
+      params.fetch(:client, {}).permit(projects_attributes: [:id, :name, :programmer_id, programmer_attributes: [:name]])
     end
 end
