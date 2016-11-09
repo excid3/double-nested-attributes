@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Projects</h3>
+<% @client.projects.each do |project| %>
+  <div>Project #<%= project.id %> - Programmer #<%= project.programmer.id %> (<%= project.programmer.name %>)</div>
+<% end %>
+
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>
